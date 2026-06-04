@@ -2,7 +2,7 @@
 ## Initial Step
 - npm init -y
 ## Package Install
-- npm i express dotenv pg  @prisma/client @prisma/adaptor-pg
+- npm i express dotenv pg  @prisma/client @prisma/adapter-pg
 
 
 ## For Development
@@ -29,3 +29,6 @@ DATABASE_URL = "postgresql://user:password@host:port/databaseName?schema=public"
 
 ### Generating prisma client code
 -npx prisma generate
+
+### Things to remember when importing prisma client in prisma.js
+- 

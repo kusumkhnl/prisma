@@ -5,7 +5,9 @@ import studentRouter from"./routes/student_routes.js"
 dotenv.config()
 let app=express()
 app.use(express.json())
+
 app.use("/student",studentRouter)
+
 let PORT =process.env.PORT||7777
 
 app.get("/",(req,res)=>{
