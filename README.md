@@ -31,4 +31,16 @@ DATABASE_URL = "postgresql://user:password@host:port/databaseName?schema=public"
 -npx prisma generate
 
 ### Things to remember when importing prisma client in prisma.js
-- 
+- prismaClient not found error can be solved by importing `import{PrismaClient}from "../generated/prisma/client.js"`
+- if `import{prismaClient}from '@prisma/client',`is needed then we have to remove
+the `output="../src/generated/prisma"`from the`scheme.prisma`file:
+
+```
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+  moduleFormat="esm"
+}
+```
+And regenerate the prisma code:
+`npx prisma generate`
